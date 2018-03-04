@@ -36,5 +36,5 @@ def print_items(items):
         print(item)
 
 if __name__ == "__main__":
-    web_side_address = 'https://sixty-north.com/c/t.txt'  # Url of example website document
+    web_side_address = 'https://sixty-north.com/c/t.txt'  # Url of example website document sys.argv[0]
     fetch_words(web_side_address)
