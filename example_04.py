@@ -24,4 +24,4 @@ for city in cities:
 print('\n')
 
 for index in d:
-    print(index)
+    print(index, d[index])
