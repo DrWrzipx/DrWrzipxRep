@@ -3,8 +3,8 @@ try:
 except ImportError:
     from urllib2 import urlopen
 
-def fetch_words():
-    story = urlopen('https://sixty-north.com/c/t.txt')
+def fetch_words(url):
+    story = urlopen(url)
     story_words = []
     for line in story:
         line_words = line.split()
@@ -17,4 +17,5 @@ def print_items(items):
         print(item)
 
 if __name__ == "__main__":
-    fetch_words()
+    url = 'https://sixty-north.com/c/t.txt';
+    fetch_words(url)
