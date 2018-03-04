@@ -10,11 +10,11 @@ def fetch_words():
         line_words = line.split()
         for word in line_words:
             story_words.append(word)
-    print_words(story_words)
+    print_items(story_words)
 
-def print_words(story_words):
-    for word in story_words:
-        print(word)
+def print_items(items):
+    for item in items:
+        print(item)
 
 if __name__ == "__main__":
     fetch_words()
