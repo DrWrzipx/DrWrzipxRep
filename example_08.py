@@ -15,8 +15,8 @@ def string_collection(string, name="Jose", country="Germany"):
     print("{0} is my remote coworker in {1}".format(name, country))
 
 
-def range_collection(new_range):
-    for i in range(new_range):
+def range_collection(start_number, stop_number, step):
+    for i in range(start_number, stop_number, step):
         print(i)
 
 
@@ -24,6 +24,6 @@ if __name__ == "__main__":
     t = ("Norway", 4.56, 3)
     tuple_collection(t)
     string_collection("Anna is so beautiful.", "Matic", "USA")
-    range_collection(5)
+    range_collection(20, 1000, 40)
 
 
