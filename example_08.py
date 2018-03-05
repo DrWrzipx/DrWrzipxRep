@@ -25,6 +25,12 @@ def dictionary_collection(dictionary):
         print("{key} => {value}".format(key=key, value=value))
 
 
+def set_collection():
+    blue_eyes = {'Olivia', 'Harry', 'Lily', 'Jack'}
+    blond_hair = {'Olivia', 'Lily'}
+    print(blue_eyes.intersection(blond_hair))
+
+
 if __name__ == "__main__":
     urls = {'Google': 'www.google.com',
             'Pluralsight': 'www.pluralsight.com',
@@ -35,5 +41,6 @@ if __name__ == "__main__":
     string_collection("Anna is so beautiful.", "Matic", "USA")
     range_collection(20, 1000, 40)
     dictionary_collection(urls)
+    set_collection()
 
 
