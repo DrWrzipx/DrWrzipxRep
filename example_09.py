@@ -1,3 +1,5 @@
+import os
+
 """Module for demonstrating exceptions
 """
 
@@ -13,4 +15,6 @@ def convert(s):
     return x
 
 if __name__ == "__main__":
-    convert("Burek")
+    convert(1)
+    path = "C:/special"
+    os.mkdir(path)
