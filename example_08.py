@@ -21,8 +21,8 @@ def range_collection(start_number, stop_number, step):
 
 
 def dictionary_collection(dictionary):
-    for item in dictionary.values():
-        print(item)
+    for key, value in dictionary.items():
+        print("{key} => {value}".format(key=key, value=value))
 
 
 if __name__ == "__main__":
