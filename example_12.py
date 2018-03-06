@@ -8,5 +8,8 @@ def lucas():
 
 
 if __name__ == "__main__":
-    for x in lucas():
-        print(x)
+    #for x in lucas():
+        #print(x)
+
+    million_squares = (x*x for x in range(1, 1000000))
+    print(list(million_squares))
