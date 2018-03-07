@@ -11,10 +11,17 @@ def analyze_text(filename):
     Raises:
         IOError: If ''filename'' does not exist or can't be read.
         
-    Returns: The number of lines in the file.
+    Returns: A tuple where the first element is the number of lines in
+        the file and the second element is the number of characters.
     """
+    lines = 0
+    characters = 0
     with open(filename, 'r') as f:
-        return sum(1 for _ in f)
+        for line in f:
+            lines += 1
+            characters += len(line)
+    return (lines, characters)
+
 
 
 class TextAnalysisTests(unittest.TestCase):
@@ -44,11 +51,11 @@ class TextAnalysisTests(unittest.TestCase):
 
     def test_line_count(self):
         """Check that the line count is correct."""
-        self.assertEqual(analyze_text(self.filename), 4)
+        self.assertEqual(analyze_text(self.filename)[0], 4)
 
     def test_character_count(self):
         """Check that the character count is correct."""
-        self.assertEqual(analyze_text(self.filename)[1], 131)
+        self.assertEqual(analyze_text(self.filename)[1], 133)
 
 
 
